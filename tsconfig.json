@@ -1,0 +1,28 @@
+{
+    "include": [
+        "src/*",
+        "**/*.d.ts",
+        "src/**/*.vue", 
+        "src/**/*.ts", 
+        "src/**/*.js"
+    ],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "esnext",
+        "allowJs": true,
+        "module": "esnext",
+        "noImplicitReturns": true,
+        "outDir": "./build",
+        "moduleResolution": "node",
+        "strict": false,
+        "lib": ["ES2015", "dom"],
+        // 在.tsx文件里支持JSX
+        "jsx":"preserve",
+        "paths": {
+            "@/*": ["src/*"],
+            "vue-router": ["node_modules/vue-router/dist/vue-router.d.ts"]
+        }
+    },
+    "exclude": ["node_modules"],
+    "type":["node"]
+}
